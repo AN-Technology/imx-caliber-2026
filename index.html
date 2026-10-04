@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IMX — Integrated Manufacturing Execution</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- MOBILE MENU BUTTON -->
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+    ☰
+</button>
+
+<!-- MOBILE SIDEBAR OVERLAY -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <div class="app">
+
+        <!-- ==========================================
+     IMX SIDEBAR
+     ========================================== -->
+<aside class="sidebar">
+    <!-- LANGUAGE SWITCH -->
+<div class="language-control">
+
+    <span class="language-label">LANGUAGE</span>
+
+    <div class="language-toggle">
+        <button
+            id="langEN"
+            class="lang-btn active"
+            onclick="setLanguage('en')">
+            EN
+        </button>
+
+        <button
+            id="langID"
+            class="lang-btn"
+            onclick="setLanguage('id')">
+            ID
+        </button>
+    </div>
+
+</div>
+
+    <!-- BRAND -->
+    <div class="imx-brand">
+
+        <div class="imx-logo">
+            IMX
+        </div>
+
+        <div class="imx-brand-text">
+            <strong>Integrated Manufacturing</strong>
+            <span>Intelligence</span>
+        </div>
+
+    </div>
+
+
+    <!-- TAGLINE -->
+    <div class="imx-tagline">
+        From Fragmented Data<br>
+        to Accountable Action
+    </div>
+
+
+    <div class="sidebar-divider"></div>
+
+
+    <!-- NAVIGATION -->
+    <nav class="menu">
+
+        <button
+            class="menu-btn active"
+            data-page="single">
+            Single Pane
+        </button>
+
+
+        <button
+            class="menu-btn"
+            data-page="problem">
+            Problem Tank
+        </button>
+
+
+        <button
+            class="menu-btn"
+            data-page="asset">
+            Asset Health
+        </button>
+
+        <button
+            class="menu-btn"
+            data-page="earlywarning">
+            Early Warning Intelligence
+        </button>
+
+        <button
+            class="menu-btn"
+            data-page="ai">
+            AI Investigation
+        </button>
+
+
+        <button
+            class="menu-btn"
+            data-page="action">
+            Action Hub
+        </button>
+
+
+        <button
+            class="menu-btn"
+            data-page="energy">
+            Energy & Emission
+        </button>
+
+
+        <button
+            class="menu-btn"
+            data-page="data">
+            Data Foundation
+        </button>
+
+
+        <button
+            class="menu-btn"
+            data-page="search">
+            Search / Ask IMX
+        </button>
+
+    </nav>
+
+
+    <!-- SIDEBAR FOOTER -->
+    <div class="sidebar-footer">
+
+        <div class="sidebar-status">
+            <span class="sidebar-status-dot"></span>
+            GOVERNED DATA ONLINE
+        </div>
+
+        <div class="sidebar-version">
+            IMX Prototype · CALIBER 2026
+        </div>
+
+    </div>
+</aside>
+
+<div class="header-search">
+
+    <input
+        type="text"
+        id="headerSearchInput"
+        placeholder="Search..."
+    >
+
+    <button
+        id="headerSearchButton"
+        type="button"
+    >
+        🔍
+    </button>
+
+</div>
+        <!-- MAIN DASHBOARD -->
+        <main class="main-content" id="mainContent">
+</main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

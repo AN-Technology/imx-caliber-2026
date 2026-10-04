@@ -1,0 +1,43 @@
+[
+ {
+  "tag": "KO-3201",
+  "parameter": "DE Radial Vibration",
+  "unit": "micron",
+  "direction": "high",
+  "alarmLimit": 45,
+  "tripLimit": 75,
+  "history": [
+    { "period": "D-5", "value": 28 },
+    { "period": "D-1", "value": 52 },
+    { "period": "Trip", "value": 75 }
+  ]
+},
+
+  {
+    "tag": "KO-3201",
+    "parameter": "Lube Oil Water Content",
+    "unit": "ppm",
+    "direction": "high",
+    "alarmLimit": 500,
+    "tripLimit": 1500,
+    "latestValue": 1800
+  },
+
+  {
+    "tag": "KO-3201",
+    "parameter": "Oil Supply Pressure",
+    "unit": "barg",
+    "direction": "low",
+    "alarmLimit": 1.4,
+    "tripLimit": 1.1
+  },
+
+  {
+    "tag": "KO-3201",
+    "parameter": "Bearing Temperature",
+    "unit": "°C",
+    "direction": "high",
+    "alarmLimit": 95,
+    "tripLimit": 110
+  }
+]

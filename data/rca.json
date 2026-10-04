@@ -1,0 +1,239 @@
+[
+  {
+    "tag": "PU-2101B",
+    "arNumber": "AR-2026-ARP-0117",
+    "event": "Mechanical Seal Leakage",
+    "failureDate": "2026-03-12",
+    "probableRootCause": "Mechanical seal degradation caused by dry-running conditions associated with suction cavitation, feed instability and insufficient seal flush.",
+    "physicalCause": "Unstable suction conditions reduced reliable seal lubrication and cooling, while low seal flush flow increased the risk of seal damage.",
+    "detectionGap": "Low seal flush flow did not have sufficient early warning and protective interlock coverage.",
+    "symptoms": [
+      "Mechanical seal leakage developed during unstable operating conditions",
+      "Suction cavitation and feed swings were observed",
+      "Seal flush flow was insufficient",
+      "No adequate protective interlock was available for low seal flush flow"
+    ],
+    "evidence": [
+      {
+        "type": "Process",
+        "finding": "Feed instability and suction cavitation created conditions associated with seal dry running."
+      },
+      {
+        "type": "Seal System",
+        "finding": "Low seal flush flow reduced seal cooling and lubrication reliability."
+      },
+      {
+        "type": "Protection Gap",
+        "finding": "Low seal flush condition lacked adequate alarm and interlock protection."
+      }
+    ],
+    "correctiveActions": [
+      "Restore stable seal flush flow",
+      "Inspect and restore the mechanical seal system"
+    ],
+    "preventiveActions": [
+      "Install seal flush flow switch and DCS alarm",
+      "Implement protective interlock for low seal flush flow",
+      "Limit operating ramp rate to 1 T/H/min",
+      "Strengthen seal flush preventive maintenance"
+    ],
+    "proactiveActions": [
+      "Roll out improved seal flush protection to similar pumps"
+    ],
+    "humanValidationRequired": true
+  },
+
+  {
+    "tag": "KO-3201",
+    "arNumber": "AR-2026-ZCU-0142",
+    "event": "High Radial Vibration Trip",
+    "failureDate": "2026-04-29",
+    "probableRootCause": "Bearing distress caused by degraded oil film due to water contamination in the lube oil system.",
+    "physicalCause": "Water ingress into the lube oil through a leaking oil cooler tube.",
+    "detectionGap": "Water contamination was not detected early because online water monitoring was not available.",
+    "symptoms": [
+      "DE radial vibration increased from 28 micron to 52 micron before trip",
+      "Compressor tripped at 75 micron radial vibration",
+      "Lube oil water content reached 1800 ppm",
+      "Water content had exceeded the 500 ppm alarm threshold"
+    ],
+    "evidence": [
+      {
+        "type": "Condition",
+        "finding": "Radial vibration increased from 28 to 52 micron before reaching the 75 micron trip threshold."
+      },
+      {
+        "type": "Lubrication",
+        "finding": "Lube oil water content reached 1800 ppm compared with the 500 ppm alarm threshold."
+      },
+      {
+        "type": "Inspection",
+        "finding": "Leaking cooler tube provided a credible water ingress path into the lube oil."
+      },
+      {
+        "type": "Monitoring Gap",
+        "finding": "No online water monitoring was available for early detection."
+      }
+    ],
+    "correctiveActions": [
+      "Repair the leaking oil cooler tube",
+      "Restore lube oil condition before equipment restart"
+    ],
+    "preventiveActions": [
+      "Install online lube oil water monitoring",
+      "Tighten vibration alert threshold to 45 micron",
+      "Monitor cooler differential pressure and conductivity",
+      "Strengthen periodic oil water and particle analysis"
+    ],
+    "proactiveActions": [
+      "Evaluate cooler retubing during turnaround",
+      "Roll out the monitoring approach to KO-3202 and KO-3203"
+    ],
+    "humanValidationRequired": true
+  },
+
+  {
+    "tag": "PM-4405B",
+    "arNumber": "AR-2026-NUP-0089",
+    "event": "Motor Bearing Failure",
+    "failureDate": "2026-07-08",
+    "probableRootCause": "Motor bearing overheating caused by degraded grease and an over-extended, non-risk-based relubrication interval.",
+    "physicalCause": "Bearing lubrication condition deteriorated until friction and temperature increased.",
+    "detectionGap": "Motor bearing temperature was not adequately trended and the routine vibration route did not sufficiently cover the motor.",
+    "symptoms": [
+      "Motor bearing temperature increased from approximately 68°C to 84°C",
+      "Bearing grease condition was degraded",
+      "Relubrication interval was not sufficiently risk-based",
+      "Motor condition monitoring coverage was limited"
+    ],
+    "evidence": [
+      {
+        "type": "Temperature",
+        "finding": "Motor bearing temperature increased from approximately 68°C to 84°C."
+      },
+      {
+        "type": "Lubrication",
+        "finding": "Inspection identified degraded bearing grease condition."
+      },
+      {
+        "type": "Maintenance",
+        "finding": "Existing relubrication frequency was insufficient for the observed operating condition."
+      },
+      {
+        "type": "Monitoring Gap",
+        "finding": "Temperature trending and motor vibration monitoring coverage were insufficient for earlier detection."
+      }
+    ],
+    "correctiveActions": [
+      "Restore the failed motor bearing",
+      "Restore correct bearing lubrication condition"
+    ],
+    "preventiveActions": [
+      "Revise motor bearing relubrication interval to four months",
+      "Implement motor bearing temperature trending and alerting",
+      "Include motors in monthly vibration monitoring",
+      "Add periodic thermography"
+    ],
+    "proactiveActions": [
+      "Roll out improved motor bearing monitoring to similar equipment"
+    ],
+    "humanValidationRequired": true
+  },
+
+  {
+    "tag": "HE-3301",
+    "arNumber": "AR-2026-ZCU-0165",
+    "event": "High Fouling — Duty Loss & High dP",
+    "failureDate": "2026-05-21",
+    "probableRootCause": "Accelerated tube-side coke/polymer fouling associated with elevated heavy ends and insufficient fouling-based cleaning triggers.",
+    "physicalCause": "Deposits accumulated on the tube side, increasing differential pressure and reducing heat-transfer duty.",
+    "detectionGap": "No sufficiently defined differential-pressure cleaning trigger and fouling KPI were available for early intervention.",
+    "symptoms": [
+      "Tube-side differential pressure increased",
+      "Heat-transfer duty decreased",
+      "Cold outlet temperature performance deteriorated",
+      "Heavy ends increased during the degradation period"
+    ],
+    "evidence": [
+      {
+        "type": "Hydraulic",
+        "finding": "Increasing tube-side differential pressure was consistent with progressive fouling."
+      },
+      {
+        "type": "Thermal",
+        "finding": "Heat exchanger duty declined as fouling progressed."
+      },
+      {
+        "type": "Process",
+        "finding": "Elevated heavy ends increased the likelihood of coke/polymer deposit formation."
+      },
+      {
+        "type": "Monitoring Gap",
+        "finding": "Cleaning decisions were not governed by a defined dP trigger and fouling performance KPI."
+      }
+    ],
+    "correctiveActions": [
+      "Clean the exchanger and restore heat-transfer performance",
+      "Verify tube-side condition after cleaning"
+    ],
+    "preventiveActions": [
+      "Establish differential-pressure cleaning trigger and alarm",
+      "Strengthen heavy-ends control and filtration",
+      "Implement fouling-factor and heat-duty KPI monitoring",
+      "Review exchanger performance trend daily"
+    ],
+    "proactiveActions": [
+      "Roll out fouling monitoring logic to similar heat exchangers"
+    ],
+    "humanValidationRequired": true
+  },
+
+  {
+    "tag": "BL-5702",
+    "arNumber": "AR-2026-OPP-0203",
+    "event": "High Vibration",
+    "failureDate": "2026-06-17",
+    "probableRootCause": "Coupling misalignment aggravated by soft-foot condition and an aged coupling.",
+    "physicalCause": "Mechanical misalignment generated elevated vibration, including increased 2X harmonic response.",
+    "detectionGap": "Alignment verification was not included adequately in preventive maintenance and vibration monitoring frequency was too long for early detection.",
+    "symptoms": [
+      "Overall vibration increased toward alarm and trip conditions",
+      "2X harmonic vibration increased",
+      "Coupling offset increased",
+      "Alignment condition deteriorated before intervention"
+    ],
+    "evidence": [
+      {
+        "type": "Vibration",
+        "finding": "High vibration together with elevated 2X harmonic response was consistent with misalignment."
+      },
+      {
+        "type": "Alignment",
+        "finding": "Coupling offset provided direct evidence of alignment degradation."
+      },
+      {
+        "type": "Mechanical",
+        "finding": "Soft-foot condition and coupling age increased susceptibility to misalignment."
+      },
+      {
+        "type": "Monitoring Gap",
+        "finding": "Preventive alignment checks and vibration monitoring frequency were insufficient for earlier intervention."
+      }
+    ],
+    "correctiveActions": [
+      "Perform laser alignment",
+      "Correct soft-foot condition",
+      "Restore acceptable coupling condition"
+    ],
+    "preventiveActions": [
+      "Add laser alignment and soft-foot checks to preventive maintenance",
+      "Introduce twelve-month coupling replacement strategy",
+      "Increase vibration monitoring frequency"
+    ],
+    "proactiveActions": [
+      "Roll out alignment PM to other Class A blowers",
+      "Evaluate wireless vibration monitoring for critical blowers"
+    ],
+    "humanValidationRequired": true
+  }
+]
